@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { ArgumentOutOfRangeError } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,18 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-dwec'; 
+  counter : number = 100; 
+
+  aumentar():void {
+    this.counter += 1;
+  }
+
+  restar():void {
+    this.counter -= 1;
+  }
+
+  reiniciar():void{
+    this.counter = 100;
+  }
 }
+
